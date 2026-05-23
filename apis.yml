@@ -1,0 +1,362 @@
+aid: grab
+name: Grab
+description: |
+  Grab is Southeast Asia's leading on-demand superapp, offering
+  ride-hailing (GrabCar / GrabBike / GrabTaxi), food delivery
+  (GrabFood), package delivery (GrabExpress), grocery and retail
+  (GrabMart), digital payments (GrabPay), financial services
+  (GrabFin), and a B2B / enterprise business unit (Grab for
+  Business). Grab exposes a partner-grade developer platform at
+  developer.grab.com covering ride pricing (Farefeed), delivery
+  (Express, GrabFood, GrabMart), payments (GrabPay QR, One-Time
+  Charge, Tokenisation, Grab POS), identity (Login with Grab),
+  loyalty (GrabRewards / Points / GrabGifts), corporate accounts
+  (Grab for Business), and digital products / bill payments via
+  Grab Kios. The platform is OAuth 2.0 based with partner-issued
+  client credentials.
+type: Index
+position: Provider
+access: Partner
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Ride Hailing
+  - Food Delivery
+  - Last-Mile Logistics
+  - Digital Payments
+  - Superapp
+  - Southeast Asia
+  - Identity
+  - Loyalty
+  - QR Payments
+  - OAuth2
+url: https://raw.githubusercontent.com/api-evangelist/grab/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: grab:grab-id
+    name: Login With Grab (Grab ID) API
+    description: |
+      Grab ID is Grab's OAuth 2.0 / OpenID Connect identity provider.
+      Partner applications use the Login With Grab flow to authenticate
+      Grab consumers and obtain ID and access tokens scoped to a
+      specific Grab product (Pay, Rewards, etc.).
+    humanURL: https://developer.grab.com/docs/grab-id/
+    baseURL: https://api.grab.com
+    tags:
+      - Identity
+      - OAuth2
+      - OpenID Connect
+      - Login
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-id/
+  - aid: grab:grabfood
+    name: GrabFood API
+    description: |
+      The GrabFood API lets merchant POS / SaaS partners receive,
+      acknowledge, and fulfill GrabFood orders, manage menus and
+      store status, and surface delivery status to the merchant.
+    humanURL: https://developer.grab.com/docs/grabfood/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Food Delivery
+      - Orders
+      - Menus
+      - Stores
+      - POS
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grabfood/api/v1-1-3
+  - aid: grab:grabmart
+    name: GrabMart API
+    description: |
+      The GrabMart API supports grocery, convenience, and retail
+      merchants integrating with Grab's on-demand marketplace —
+      including catalog ingestion, store-level inventory, order
+      acknowledgement, and fulfillment events.
+    humanURL: https://developer.grab.com/docs/grabmart/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Grocery
+      - Retail
+      - Orders
+      - Inventory
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grabmart/api/v1-1-3
+  - aid: grab:grab-express
+    name: GrabExpress API
+    description: |
+      GrabExpress is Grab's on-demand same-city courier API for
+      ecommerce, retail, and SaaS partners. Partners create delivery
+      requests, fetch quotes, track couriers in real time, and
+      receive webhook updates over the delivery lifecycle.
+    humanURL: https://developer.grab.com/docs/grab-express/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Last-Mile
+      - Couriers
+      - Deliveries
+      - Tracking
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-express/
+  - aid: grab:farefeed
+    name: Farefeed (Partner Ride Pricing) API
+    description: |
+      The Farefeed API exposes ride pricing and supply information
+      to ecosystem partners (e.g. mapping, navigation, planning
+      apps) so they can render Grab fare estimates inline.
+    humanURL: https://developer.grab.com/docs/partner-farefeed/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Pricing
+      - Estimates
+      - Mobility
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/partner-farefeed/
+  - aid: grab:partner-apps
+    name: Partner Apps Integration API
+    description: |
+      Partner Apps Integration lets third-party applications surface
+      services inside the Grab consumer app via a partner-app
+      framework — covering deep links, in-app activation, and event
+      callbacks.
+    humanURL: https://developer.grab.com/docs/partner-apps/
+    baseURL: https://api.grab.com
+    tags:
+      - Partner Apps
+      - In-App
+      - Deep Links
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/partner-apps/
+  - aid: grab:grab-for-business
+    name: Grab For Business Partner API
+    description: |
+      The Grab For Business Partner API supports corporate travel,
+      expense, and HR platforms that need to provision corporate
+      Grab accounts, set ride policies, and pull employee trip and
+      receipt data for expense reconciliation.
+    humanURL: https://developer.grab.com/docs/gfb/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Corporate
+      - Travel
+      - Expense
+      - HR
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/gfb/
+  - aid: grab:grabgifts
+    name: GrabGifts Integration API
+    description: |
+      GrabGifts Integration enables partner platforms to issue and
+      redeem Grab e-gift vouchers — used for employee rewards,
+      customer incentives, and loyalty programs across SEA.
+    humanURL: https://developer.grab.com/docs/grab-gifts/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Vouchers
+      - Gift Cards
+      - Rewards
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-gifts/
+  - aid: grab:grab-defence
+    name: GrabDefence Risk Evaluation API
+    description: |
+      GrabDefence exposes Grab's internal fraud, abuse, and risk
+      evaluation platform as an API for partners — covering device
+      risk scoring, account integrity checks, and transaction risk
+      signals.
+    humanURL: https://developer.grab.com/docs/grab-defence/
+    baseURL: https://api.grab.com
+    tags:
+      - Fraud
+      - Risk
+      - Trust and Safety
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-defence/
+  - aid: grab:grabpay-qr
+    name: GrabPay QR API
+    description: |
+      GrabPay QR exposes both merchant-presented (MPM) and
+      consumer-presented (CPM) QR payment flows for in-store
+      merchants accepting GrabPay across SEA.
+    humanURL: https://developer.grab.com/docs/grabpay-qr/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Payments
+      - QR
+      - Merchant
+      - GrabPay
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grabpay-qr/
+  - aid: grab:grabpay-one-time-charge
+    name: GrabPay One-Time Charge API
+    description: |
+      The One-Time Charge API supports online merchants charging
+      GrabPay wallets via a redirect or app-to-app handoff
+      checkout flow, with payment success and failure webhook
+      notifications.
+    humanURL: https://developer.grab.com/docs/payment-otc/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Payments
+      - Checkout
+      - GrabPay
+      - Webhooks
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/payment-otc/api/v2
+  - aid: grab:grabpay-tokenisation
+    name: GrabPay Tokenisation API
+    description: |
+      Tokenisation lets partner merchants store a customer's GrabPay
+      payment instrument as a reusable token for recurring and
+      one-click checkouts, with PCI-scope reduction.
+    humanURL: https://developer.grab.com/docs/tokenisation-v4/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Tokenisation
+      - Recurring
+      - GrabPay
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/tokenisation-v4/
+  - aid: grab:grab-pos
+    name: Grab POS API
+    description: |
+      The Grab POS API integrates physical point-of-sale terminals
+      with GrabPay for in-store payment acceptance, including
+      transaction lifecycle, refund, and reconciliation flows.
+    humanURL: https://developer.grab.com/docs/pos-api-v3/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - POS
+      - In-Store
+      - Payments
+      - GrabPay
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/pos-api-v3/
+  - aid: grab:grab-rewards
+    name: GrabRewards (Points Earning & Tier) APIs
+    description: |
+      The Points Earning and GrabRewards Tier APIs let ecosystem
+      partners award GrabRewards points for qualifying activity and
+      check a user's loyalty tier for tier-based offers.
+    humanURL: https://developer.grab.com/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Loyalty
+      - Rewards
+      - Points
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/
+  - aid: grab:grab-kios-digital-products
+    name: Grab Kios Digital Products API
+    description: |
+      Grab Kios Digital Products API powers digital-goods commerce
+      for Grab Kios agents in Indonesia — covering top-ups for
+      mobile credit, data packages, gaming credits, and digital
+      vouchers.
+    humanURL: https://developer.grab.com/docs/grab-kios-digital-products-api/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Digital Goods
+      - Top-Up
+      - Indonesia
+      - Kios
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-kios-digital-products-api/
+  - aid: grab:grab-kios-biller-gateway
+    name: Grab Kios Biller Gateway API
+    description: |
+      The Biller Gateway API lets Grab Kios agents accept bill
+      payments for electricity, water, multifinance, and other
+      Indonesian billers, with inquiry, payment, and reversal
+      operations.
+    humanURL: https://developer.grab.com/docs/grab-kios-biller-gateway-api/
+    baseURL: https://partner-api.grab.com
+    tags:
+      - Bill Payment
+      - Indonesia
+      - Kios
+    properties:
+      - type: Documentation
+        url: https://developer.grab.com/docs/grab-kios-biller-gateway-api/
+features:
+  - name: Superapp Coverage
+    description: APIs span mobility, food, mart, express delivery, payments, identity, rewards, and corporate travel.
+  - name: Multi-Country SEA Footprint
+    description: APIs operate across Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines, Myanmar, and Cambodia.
+  - name: OAuth 2.0 with Partner Credentials
+    description: Partner integrations use OAuth 2.0 (client credentials and authorization code) with partner-issued client_id and client_secret.
+  - name: GrabPay Payments Stack
+    description: QR (MPM/CPM), One-Time Charge, Tokenisation, and POS together cover online, in-app, and in-store GrabPay acceptance.
+  - name: Webhook Events
+    description: Order, delivery, payment, and risk events are pushed to partner webhooks throughout the lifecycle.
+useCases:
+  - name: Merchant POS Integration
+    description: Restaurants and grocers connect their POS to GrabFood and GrabMart for order ingestion, menu sync, and fulfillment.
+  - name: Last-Mile Delivery
+    description: E-commerce and retailers use GrabExpress as a same-city delivery network for parcels.
+  - name: Wallet Checkout
+    description: Online merchants accept GrabPay as a checkout option through One-Time Charge or Tokenisation.
+  - name: Corporate Travel
+    description: Travel and expense platforms provision corporate Grab accounts and reconcile employee rides.
+  - name: Loyalty & Rewards
+    description: Partners issue and redeem GrabGifts vouchers and award GrabRewards points to drive engagement.
+integrations:
+  - name: Toast POS
+  - name: Square
+  - name: Oracle Micros
+  - name: Deliverect
+  - name: Otter
+  - name: SAP Concur
+  - name: Shopify
+  - name: WooCommerce
+  - name: TravelPerk
+authentication:
+  - type: OAuth2ClientCredentials
+    description: Server-to-server integrations exchange a client_id and client_secret for scoped bearer tokens.
+  - type: OAuth2AuthorizationCode
+    description: Consumer-facing integrations use the authorization_code grant via Login With Grab.
+  - type: HMACSignature
+    description: Sensitive payment APIs additionally require HMAC request signing using a shared partner secret.
+  - type: WebhookSignature
+    description: Webhook deliveries are signed; partners verify signatures before processing events.
+common:
+  - type: Website
+    url: https://www.grab.com/
+  - type: DeveloperPortal
+    url: https://developer.grab.com/
+  - type: Documentation
+    url: https://developer.grab.com/docs
+  - type: GrabPay
+    url: https://www.grab.com/sg/pay/
+  - type: GrabForBusiness
+    url: https://business.grab.com/
+  - type: Newsroom
+    url: https://www.grab.com/sg/press/
+  - type: Sustainability
+    url: https://www.grab.com/sg/sustainability/
+  - type: InvestorRelations
+    url: https://investors.grab.com/
+  - type: Careers
+    url: https://grab.careers/
+  - type: GitHub
+    url: https://github.com/grab
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/grabapp/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

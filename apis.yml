@@ -357,6 +357,8 @@ common:
     url: https://github.com/grab
   - type: LinkedIn
     url: https://www.linkedin.com/company/grabapp/
+  - type: LLMsTxt
+    url: https://developer.grab.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

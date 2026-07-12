@@ -335,6 +335,12 @@ authentication:
   - type: WebhookSignature
     description: Webhook deliveries are signed; partners verify signatures before processing events.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/grab-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/grab-domain-security.yml
+  - type: Authentication
+    url: authentication/grab-authentication.yml
   - type: Website
     url: https://www.grab.com/
   - type: DeveloperPortal
@@ -359,6 +365,8 @@ common:
     url: https://www.linkedin.com/company/grabapp/
   - type: LlmsText
     url: https://developer.grab.com/llms.txt
+  - url: https://www.grab.com/sg/blog/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

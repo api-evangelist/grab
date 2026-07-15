@@ -335,6 +335,8 @@ authentication:
   - type: WebhookSignature
     description: Webhook deliveries are signed; partners verify signatures before processing events.
 common:
+  - type: AgenticAccess
+    url: agentic-access/grab-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/grab-vulnerability-disclosure.yml
   - type: DomainSecurity

@@ -1,0 +1,182 @@
+openapi: 3.1.0
+info:
+  title: Grab Partner APIs (, GrabPay, ) GrabExpress GrabID API
+  description: Best-effort OpenAPI 3.1 for Grab's partner platform APIs. Covers OAuth 2.0 identity (GrabID), GrabPay payment endpoints (one-time charge, refund, status), and GrabExpress delivery quotes / orders. All requests use OAuth 2.0 (client_credentials for server-to-server or authorization_code for user-authorized flows).
+  version: v1
+servers:
+- url: https://partner-api.grab.com
+  description: Production
+- url: https://partner-api.stg-myteksi.com
+  description: Staging
+security:
+- bearerAuth: []
+tags:
+- name: GrabID
+paths:
+  /grabid/v1/oauth2/.well-known/openid-configuration:
+    get:
+      tags:
+      - GrabID
+      summary: OpenID Connect discovery document
+      operationId: getOpenidConfiguration
+      security: []
+      responses:
+        '200':
+          description: OIDC discovery document
+          content:
+            application/json:
+              schema:
+                type: object
+  /grabid/v1/oauth2/authorize:
+    get:
+      tags:
+      - GrabID
+      summary: Authorization endpoint (authorization code grant)
+      operationId: authorize
+      security: []
+      parameters:
+      - in: query
+        name: client_id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: redirect_uri
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: response_type
+        required: true
+        schema:
+          type: string
+          enum:
+          - code
+      - in: query
+        name: scope
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: state
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: code_challenge
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: code_challenge_method
+        required: true
+        schema:
+          type: string
+          enum:
+          - S256
+      - in: query
+        name: nonce
+        schema:
+          type: string
+      - in: query
+        name: acr_values
+        schema:
+          type: string
+      responses:
+        '302':
+          description: Redirect to redirect_uri with authorization code
+  /grabid/v1/oauth2/token:
+    post:
+      tags:
+      - GrabID
+      summary: Token endpoint (exchange credentials/code for access token)
+      operationId: token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - grant_type
+              - client_id
+              properties:
+                grant_type:
+                  type: string
+                  enum:
+                  - client_credentials
+                  - authorization_code
+                  - refresh_token
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+                code:
+                  type: string
+                code_verifier:
+                  type: string
+                redirect_uri:
+                  type: string
+                refresh_token:
+                  type: string
+                scope:
+                  type: string
+      responses:
+        '200':
+          description: Access token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                    enum:
+                    - Bearer
+                  expires_in:
+                    type: integer
+                  id_token:
+                    type: string
+                  refresh_token:
+                    type: string
+                  scope:
+                    type: string
+  /grabid/v1/oauth2/token-info:
+    post:
+      tags:
+      - GrabID
+      summary: Verify and decode ID token
+      operationId: tokenInfo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - client_id
+              - id_token_hint
+              - nonce
+              properties:
+                client_id:
+                  type: string
+                id_token_hint:
+                  type: string
+                nonce:
+                  type: string
+      responses:
+        '200':
+          description: Decoded ID token claims
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

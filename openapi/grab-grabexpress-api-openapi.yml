@@ -1,0 +1,180 @@
+openapi: 3.1.0
+info:
+  title: Grab Partner APIs (GrabID, GrabPay, ) GrabExpress API
+  description: Best-effort OpenAPI 3.1 for Grab's partner platform APIs. Covers OAuth 2.0 identity (GrabID), GrabPay payment endpoints (one-time charge, refund, status), and GrabExpress delivery quotes / orders. All requests use OAuth 2.0 (client_credentials for server-to-server or authorization_code for user-authorized flows).
+  version: v1
+servers:
+- url: https://partner-api.grab.com
+  description: Production
+- url: https://partner-api.stg-myteksi.com
+  description: Staging
+security:
+- bearerAuth: []
+tags:
+- name: GrabExpress
+paths:
+  /grab-express-sandbox/v1/deliveries/quotes:
+    post:
+      tags:
+      - GrabExpress
+      summary: Request a delivery quote
+      operationId: getDeliveryQuote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                serviceType:
+                  type: string
+                  enum:
+                  - INSTANT
+                  - SAME_DAY
+                packages:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      quantity:
+                        type: integer
+                      dimensions:
+                        type: object
+                        properties:
+                          height:
+                            type: integer
+                          width:
+                            type: integer
+                          depth:
+                            type: integer
+                          weight:
+                            type: integer
+                origin:
+                  $ref: '#/components/schemas/DeliveryContact'
+                destination:
+                  $ref: '#/components/schemas/DeliveryContact'
+      responses:
+        '200':
+          description: Quote
+  /grab-express-sandbox/v1/deliveries:
+    post:
+      tags:
+      - GrabExpress
+      summary: Create a delivery order
+      operationId: createDelivery
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                merchantOrderID:
+                  type: string
+                serviceType:
+                  type: string
+                packages:
+                  type: array
+                  items:
+                    type: object
+                origin:
+                  $ref: '#/components/schemas/DeliveryContact'
+                destination:
+                  $ref: '#/components/schemas/DeliveryContact'
+                paymentMethod:
+                  type: string
+                  enum:
+                  - CASHLESS
+                  - CASH
+      responses:
+        '200':
+          description: Delivery created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  deliveryID:
+                    type: string
+                  quote:
+                    type: object
+                  status:
+                    type: string
+  /grab-express-sandbox/v1/deliveries/{deliveryID}:
+    get:
+      tags:
+      - GrabExpress
+      summary: Get delivery status
+      operationId: getDelivery
+      parameters:
+      - in: path
+        name: deliveryID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Delivery
+    delete:
+      tags:
+      - GrabExpress
+      summary: Cancel a delivery
+      operationId: cancelDelivery
+      parameters:
+      - in: path
+        name: deliveryID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Cancelled
+components:
+  schemas:
+    DeliveryContact:
+      type: object
+      properties:
+        address:
+          type: object
+          properties:
+            address:
+              type: string
+            coordinates:
+              type: object
+              properties:
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+            keywords:
+              type: string
+            cityName:
+              type: string
+        contact:
+          type: object
+          properties:
+            firstName:
+              type: string
+            lastName:
+              type: string
+            phone:
+              type: object
+              properties:
+                countryCode:
+                  type: string
+                number:
+                  type: string
+            email:
+              type: string
+              format: email
+            companyName:
+              type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

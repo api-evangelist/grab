@@ -1,0 +1,160 @@
+openapi: 3.1.0
+info:
+  title: Grab Partner APIs (GrabID, , ) GrabExpress GrabPay API
+  description: Best-effort OpenAPI 3.1 for Grab's partner platform APIs. Covers OAuth 2.0 identity (GrabID), GrabPay payment endpoints (one-time charge, refund, status), and GrabExpress delivery quotes / orders. All requests use OAuth 2.0 (client_credentials for server-to-server or authorization_code for user-authorized flows).
+  version: v1
+servers:
+- url: https://partner-api.grab.com
+  description: Production
+- url: https://partner-api.stg-myteksi.com
+  description: Staging
+security:
+- bearerAuth: []
+tags:
+- name: GrabPay
+paths:
+  /grabpay/partner/v2/charge/init:
+    post:
+      tags:
+      - GrabPay
+      summary: Initiate a one-time charge
+      operationId: chargeInit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - partnerTxID
+              - partnerGroupTxID
+              - amount
+              - currency
+              - description
+              - merchantID
+              properties:
+                partnerTxID:
+                  type: string
+                partnerGroupTxID:
+                  type: string
+                amount:
+                  type: integer
+                currency:
+                  type: string
+                description:
+                  type: string
+                merchantID:
+                  type: string
+                metaData:
+                  type: object
+      responses:
+        '200':
+          description: Charge initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request:
+                    type: string
+                  partnerTxID:
+                    type: string
+  /grabpay/partner/v2/charge/complete:
+    post:
+      tags:
+      - GrabPay
+      summary: Complete a previously initiated charge
+      operationId: chargeComplete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - partnerTxID
+              properties:
+                partnerTxID:
+                  type: string
+      responses:
+        '200':
+          description: Charge completed
+  /grabpay/partner/v2/charge/{partnerTxID}:
+    get:
+      tags:
+      - GrabPay
+      summary: Get charge transaction status
+      operationId: getChargeStatus
+      parameters:
+      - in: path
+        name: partnerTxID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: currency
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Status
+  /grabpay/partner/v2/refund:
+    post:
+      tags:
+      - GrabPay
+      summary: Refund a charge
+      operationId: refund
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - partnerTxID
+              - partnerGroupTxID
+              - originPartnerTxID
+              - amount
+              - currency
+              - description
+              - merchantID
+              properties:
+                partnerTxID:
+                  type: string
+                partnerGroupTxID:
+                  type: string
+                originPartnerTxID:
+                  type: string
+                amount:
+                  type: integer
+                currency:
+                  type: string
+                description:
+                  type: string
+                merchantID:
+                  type: string
+      responses:
+        '200':
+          description: Refund processed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  partnerTxID:
+                    type: string
+                  refundPartnerTxID:
+                    type: string
+                  status:
+                    type: string
+                    enum:
+                    - success
+                    - failed
+                    - pending
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

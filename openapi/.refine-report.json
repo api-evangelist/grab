@@ -1,0 +1,18 @@
+{
+  "provider": "grab",
+  "sources": [
+    "grab-grabexpress-api-openapi.yml",
+    "grab-grabid-api-openapi.yml",
+    "grab-grabpay-api-openapi.yml"
+  ],
+  "outputs": [
+    "grab-grabexpress-api-openapi.yml",
+    "grab-grabid-api-openapi.yml",
+    "grab-grabpay-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

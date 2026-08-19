@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Grab Partner APIs (GrabID, GrabPay, ) GrabExpress API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GrabExpress",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Request a delivery quote",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://partner-api.grab.com/grab-express-sandbox/v1/deliveries/quotes",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Request a delivery quote"
+        },
+        {
+          "info": {
+            "name": "Create a delivery order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://partner-api.grab.com/grab-express-sandbox/v1/deliveries",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a delivery order"
+        },
+        {
+          "info": {
+            "name": "Get delivery status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner-api.grab.com/grab-express-sandbox/v1/deliveries/:deliveryID",
+            "params": [
+              {
+                "name": "deliveryID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get delivery status"
+        },
+        {
+          "info": {
+            "name": "Cancel a delivery",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://partner-api.grab.com/grab-express-sandbox/v1/deliveries/:deliveryID",
+            "params": [
+              {
+                "name": "deliveryID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel a delivery"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

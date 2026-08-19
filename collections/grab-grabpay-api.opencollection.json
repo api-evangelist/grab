@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Grab Partner APIs (GrabID, , ) GrabExpress GrabPay API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GrabPay",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Initiate a one-time charge",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://partner-api.grab.com/grabpay/partner/v2/charge/init",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Initiate a one-time charge"
+        },
+        {
+          "info": {
+            "name": "Complete a previously initiated charge",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://partner-api.grab.com/grabpay/partner/v2/charge/complete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Complete a previously initiated charge"
+        },
+        {
+          "info": {
+            "name": "Get charge transaction status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner-api.grab.com/grabpay/partner/v2/charge/:partnerTxID",
+            "params": [
+              {
+                "name": "partnerTxID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "currency",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get charge transaction status"
+        },
+        {
+          "info": {
+            "name": "Refund a charge",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://partner-api.grab.com/grabpay/partner/v2/refund",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Refund a charge"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

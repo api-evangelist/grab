@@ -1,0 +1,409 @@
+{
+  "item": [
+    {
+      "id": "76f24fee-a7fb-4734-af09-b5c95433d307",
+      "name": "GrabExpress",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "99f4dfbb-9b0b-454d-ad6a-beaeb1027db2",
+          "name": "Request a delivery quote",
+          "request": {
+            "name": "Request a delivery quote",
+            "description": {},
+            "url": {
+              "path": [
+                "grab-express-sandbox",
+                "v1",
+                "deliveries",
+                "quotes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"serviceType\": \"<string>\",\n  \"packages\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"dimensions\": {\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"depth\": \"<integer>\",\n        \"weight\": \"<integer>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"dimensions\": {\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"depth\": \"<integer>\",\n        \"weight\": \"<integer>\"\n      }\n    }\n  ],\n  \"origin\": {\n    \"address\": {\n      \"address\": \"<string>\",\n      \"coordinates\": {\n        \"latitude\": \"<number>\",\n        \"longitude\": \"<number>\"\n      },\n      \"keywords\": \"<string>\",\n      \"cityName\": \"<string>\"\n    },\n    \"contact\": {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"phone\": {\n        \"countryCode\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"email\": \"<email>\",\n      \"companyName\": \"<string>\"\n    }\n  },\n  \"destination\": {\n    \"address\": {\n      \"address\": \"<string>\",\n      \"coordinates\": {\n        \"latitude\": \"<number>\",\n        \"longitude\": \"<number>\"\n      },\n      \"keywords\": \"<string>\",\n      \"cityName\": \"<string>\"\n    },\n    \"contact\": {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"phone\": {\n        \"countryCode\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"email\": \"<email>\",\n      \"companyName\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "039f0808-a04c-422b-aac4-38abeb2eae00",
+              "name": "Quote",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "grab-express-sandbox",
+                    "v1",
+                    "deliveries",
+                    "quotes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"serviceType\": \"<string>\",\n  \"packages\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"dimensions\": {\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"depth\": \"<integer>\",\n        \"weight\": \"<integer>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"dimensions\": {\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"depth\": \"<integer>\",\n        \"weight\": \"<integer>\"\n      }\n    }\n  ],\n  \"origin\": {\n    \"address\": {\n      \"address\": \"string\",\n      \"coordinates\": {\n        \"latitude\": 1548.3194252242592,\n        \"longitude\": 9553.628349660232\n      },\n      \"keywords\": \"string\",\n      \"cityName\": \"string\"\n    },\n    \"contact\": {\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"phone\": {\n        \"countryCode\": \"string\",\n        \"number\": \"string\"\n      },\n      \"email\": \"RcbZyXO0xIQfJr@xfLyiM.ouds\",\n      \"companyName\": \"string\"\n    }\n  },\n  \"destination\": {\n    \"address\": {\n      \"address\": \"string\",\n      \"coordinates\": {\n        \"latitude\": 8827.044477332449,\n        \"longitude\": 9204.79582719648\n      },\n      \"keywords\": \"string\",\n      \"cityName\": \"string\"\n    },\n    \"contact\": {\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"phone\": {\n        \"countryCode\": \"string\",\n        \"number\": \"string\"\n      },\n      \"email\": \"capJ@NFgaGyEEBXWkiwiPVKZuYKoRs.wgg\",\n      \"companyName\": \"string\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7890b68f-9945-4531-9d98-3ababffb664e",
+          "name": "Create a delivery order",
+          "request": {
+            "name": "Create a delivery order",
+            "description": {},
+            "url": {
+              "path": [
+                "grab-express-sandbox",
+                "v1",
+                "deliveries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"merchantOrderID\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"packages\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"origin\": {\n    \"address\": {\n      \"address\": \"<string>\",\n      \"coordinates\": {\n        \"latitude\": \"<number>\",\n        \"longitude\": \"<number>\"\n      },\n      \"keywords\": \"<string>\",\n      \"cityName\": \"<string>\"\n    },\n    \"contact\": {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"phone\": {\n        \"countryCode\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"email\": \"<email>\",\n      \"companyName\": \"<string>\"\n    }\n  },\n  \"destination\": {\n    \"address\": {\n      \"address\": \"<string>\",\n      \"coordinates\": {\n        \"latitude\": \"<number>\",\n        \"longitude\": \"<number>\"\n      },\n      \"keywords\": \"<string>\",\n      \"cityName\": \"<string>\"\n    },\n    \"contact\": {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"phone\": {\n        \"countryCode\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"email\": \"<email>\",\n      \"companyName\": \"<string>\"\n    }\n  },\n  \"paymentMethod\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7eb1e12a-70c0-4d8a-b972-89d078f8c264",
+              "name": "Delivery created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "grab-express-sandbox",
+                    "v1",
+                    "deliveries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"merchantOrderID\": \"<string>\",\n  \"serviceType\": \"<string>\",\n  \"packages\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"origin\": {\n    \"address\": {\n      \"address\": \"string\",\n      \"coordinates\": {\n        \"latitude\": 9322.465604705767,\n        \"longitude\": 4627.076692246484\n      },\n      \"keywords\": \"string\",\n      \"cityName\": \"string\"\n    },\n    \"contact\": {\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"phone\": {\n        \"countryCode\": \"string\",\n        \"number\": \"string\"\n      },\n      \"email\": \"DGdZJHg@CqZNEGFBEJULNyLBfkqfWElacKFbaqOu.tank\",\n      \"companyName\": \"string\"\n    }\n  },\n  \"destination\": {\n    \"address\": {\n      \"address\": \"string\",\n      \"coordinates\": {\n        \"latitude\": 6914.219721374858,\n        \"longitude\": 1238.342530061115\n      },\n      \"keywords\": \"string\",\n      \"cityName\": \"string\"\n    },\n    \"contact\": {\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"phone\": {\n        \"countryCode\": \"string\",\n        \"number\": \"string\"\n      },\n      \"email\": \"1Ax-lootk9t@TCTADLfFNFbU.vtv\",\n      \"companyName\": \"string\"\n    }\n  },\n  \"paymentMethod\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"deliveryID\": \"string\",\n  \"quote\": {},\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8dd8b6df-c5b8-4196-8a35-09e98d3221d4",
+          "name": "Get delivery status",
+          "request": {
+            "name": "Get delivery status",
+            "description": {},
+            "url": {
+              "path": [
+                "grab-express-sandbox",
+                "v1",
+                "deliveries",
+                ":deliveryID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deliveryID",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b9eea75e-6aba-4af1-b143-d2967dbf6b53",
+              "name": "Delivery",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "grab-express-sandbox",
+                    "v1",
+                    "deliveries",
+                    ":deliveryID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deliveryID",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98f494e2-4cdd-4515-aaf4-2c5f319421ba",
+          "name": "Cancel a delivery",
+          "request": {
+            "name": "Cancel a delivery",
+            "description": {},
+            "url": {
+              "path": [
+                "grab-express-sandbox",
+                "v1",
+                "deliveries",
+                ":deliveryID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deliveryID",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "423e1566-db2a-489d-b84f-ad28577d9db9",
+              "name": "Cancelled",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "grab-express-sandbox",
+                    "v1",
+                    "deliveries",
+                    ":deliveryID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deliveryID",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://partner-api.grab.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9d1251d5-4dfb-4511-b64c-8c5627a80d13",
+    "name": "Grab Partner APIs (GrabID, GrabPay, ) GrabExpress API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 for Grab's partner platform APIs. Covers OAuth 2.0 identity (GrabID), GrabPay payment endpoints (one-time charge, refund, status), and GrabExpress delivery quotes / orders. All requests use OAuth 2.0 (client_credentials for server-to-server or authorization_code for user-authorized flows).",
+      "type": "text/plain"
+    }
+  }
+}

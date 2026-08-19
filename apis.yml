@@ -45,7 +45,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/grab/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 apis:
 - aid: grab:grab-id
   name: Login With Grab (Grab ID) API

@@ -36,6 +36,17 @@ tags:
   - Food Delivery
   - Last-Mile Logistics
   - Digital Payments
+  - Super App
+  - Southeast Asia
+  - Identity
+  - Loyalty
+  - QR Payments
+  - Authentication
+tags_raw:
+  - Ride Hailing
+  - Food Delivery
+  - Last-Mile Logistics
+  - Digital Payments
   - Superapp
   - Southeast Asia
   - Identity
@@ -61,6 +72,11 @@ apis:
   baseURL: https://api.grab.com
   tags:
   - Identity
+  - Authentication
+  - OpenID Connect
+  - Login
+  tags_raw:
+  - Identity
   - OAuth2
   - OpenID Connect
   - Login
@@ -78,6 +94,12 @@ apis:
   humanURL: https://developer.grab.com/docs/grabfood/
   baseURL: https://partner-api.grab.com
   tags:
+  - Food Delivery
+  - Order
+  - Menus
+  - Stores
+  - Point-of-Sale
+  tags_raw:
   - Food Delivery
   - Orders
   - Menus
@@ -101,6 +123,11 @@ apis:
   tags:
   - Grocery
   - Retail
+  - Order
+  - Inventory
+  tags_raw:
+  - Grocery
+  - Retail
   - Orders
   - Inventory
   properties:
@@ -119,6 +146,11 @@ apis:
   humanURL: https://developer.grab.com/docs/grab-express/
   baseURL: https://partner-api.grab.com
   tags:
+  - Last Mile
+  - Couriers
+  - Deliveries
+  - Tracking
+  tags_raw:
   - Last-Mile
   - Couriers
   - Deliveries
@@ -252,6 +284,11 @@ apis:
   - Payments
   - Checkout
   - GrabPay
+  - Webhook
+  tags_raw:
+  - Payments
+  - Checkout
+  - GrabPay
   - Webhooks
   properties:
   - type: Documentation
@@ -284,6 +321,11 @@ apis:
   humanURL: https://developer.grab.com/docs/pos-api-v3/
   baseURL: https://partner-api.grab.com
   tags:
+  - Point-of-Sale
+  - In-Store
+  - Payments
+  - GrabPay
+  tags_raw:
   - POS
   - In-Store
   - Payments
@@ -341,6 +383,10 @@ apis:
   humanURL: https://developer.grab.com/docs/grab-kios-biller-gateway-api/
   baseURL: https://partner-api.grab.com
   tags:
+  - Bill Payments
+  - Indonesia
+  - Kios
+  tags_raw:
   - Bill Payment
   - Indonesia
   - Kios

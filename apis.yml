@@ -476,6 +476,9 @@ authentication:
   - type: WebhookSignature
     description: Webhook deliveries are signed; partners verify signatures before processing events.
 common:
+  - type: CapabilityMap
+    url: capabilities/grab-capability-edges.yml
+    name: Grab Business Capability Map
   - type: AgenticAccess
     url: agentic-access/grab-agentic-access.yml
   - type: VulnerabilityDisclosure

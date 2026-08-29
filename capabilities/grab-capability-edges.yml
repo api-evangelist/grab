@@ -1,0 +1,25 @@
+slug: grab
+provider: Grab
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Agriculture & Food Production
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: GrabExpress
+  spec_file: grab-grabexpress-api-openapi.yml
+  capability_id: BC-520.50
+  capability_id_l1: BC-520
+  capability_name: Logistics Operations Management
+  confidence: 0.72
+  evidence: POST /grab-express-sandbox/v1/deliveries/quotes  getDeliveryQuote  Request a delivery quote
+    ... createDelivery  Create a delivery order
+  reason: Parcel delivery quoting, booking, tracking and cancellation — third-party transport execution,
+    i.e. logistics operations. Kept below 0.8 as it could also be read as order fulfilment orchestration.

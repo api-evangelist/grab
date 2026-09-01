@@ -47,7 +47,7 @@ tags:
   - Food Delivery
   - Last-Mile Logistics
   - Digital Payments
-  - Superapp
+  - Super App
   - Southeast Asia
   - Identity
   - Loyalty
@@ -109,7 +109,7 @@ apis:
   - Order
   - Menus
   - Stores
-  - POS
+  - Point-of-Sale
   tags_raw:
   - Food Delivery
   - Orders
@@ -157,7 +157,7 @@ apis:
   humanURL: https://developer.grab.com/docs/grab-express/
   baseURL: https://partner-api.grab.com
   tags:
-  - Last-Mile
+  - Last Mile
   - Couriers
   - Deliveries
   - Tracking
@@ -332,7 +332,7 @@ apis:
   humanURL: https://developer.grab.com/docs/pos-api-v3/
   baseURL: https://partner-api.grab.com
   tags:
-  - POS
+  - Point-of-Sale
   - In-Store
   - Payments
   - GrabPay
@@ -394,7 +394,7 @@ apis:
   humanURL: https://developer.grab.com/docs/grab-kios-biller-gateway-api/
   baseURL: https://partner-api.grab.com
   tags:
-  - Bill Payment
+  - Bill Payments
   - Indonesia
   - Kios
   tags_raw:

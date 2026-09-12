@@ -6,12 +6,10 @@
       "feed_url": "https://www.grab.com/sg/blog/feed/",
       "title": "",
       "saved": 0,
-      "method": "feed",
-      "nature": "vendor-blog",
-      "nature_basis": "path_blog"
+      "method": "feed"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 18,
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",

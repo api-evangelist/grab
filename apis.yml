@@ -221,6 +221,11 @@ apis:
   tags:
   - Corporate
   - Travel
+  - Expenses
+  - Human Resources
+  tags_raw:
+  - Corporate
+  - Travel
   - Expense
   - HR
   properties:
@@ -273,6 +278,11 @@ apis:
   humanURL: https://developer.grab.com/docs/grabpay-qr/
   baseURL: https://partner-api.grab.com
   tags:
+  - Payments
+  - QR
+  - Merchants
+  - GrabPay
+  tags_raw:
   - Payments
   - QR
   - Merchant

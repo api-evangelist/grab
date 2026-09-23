@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Grab Partner APIs (GrabID, , ) GrabExpress GrabPay API
+  title: Grab Partner APIs (GrabID, , GrabExpress) Grab Pay API
   description: Best-effort OpenAPI 3.1 for Grab's partner platform APIs. Covers OAuth 2.0 identity (GrabID), GrabPay payment endpoints (one-time charge, refund, status), and GrabExpress delivery quotes / orders. All requests use OAuth 2.0 (client_credentials for server-to-server or authorization_code for user-authorized flows).
   version: v1
 servers:

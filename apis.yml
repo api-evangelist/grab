@@ -393,6 +393,11 @@ apis:
   baseURL: https://partner-api.grab.com
   tags:
   - Digital Goods
+  - Top Up
+  - Indonesia
+  - Kios
+  tags_raw:
+  - Digital Goods
   - Top-Up
   - Indonesia
   - Kios

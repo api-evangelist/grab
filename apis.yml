@@ -499,6 +499,12 @@ authentication:
   - type: WebhookSignature
     description: Webhook deliveries are signed; partners verify signatures before processing events.
 common:
+  - type: Plans
+    url: plans/grab-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/grab-rate-limits.yml
+  - type: FinOps
+    url: finops/grab-finops.yml
   - type: CapabilityMap
     url: capabilities/grab-capability-edges.yml
     name: Grab Business Capability Map

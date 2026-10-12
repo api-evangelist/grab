@@ -1,0 +1,31 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://openid.net/developers/certified-openid-connect-implementations/
+marketplace_apps: []
+edges:
+- partner_name: OpenID Foundation certification
+  partner: null
+  partner_match: domain
+  type: contract
+  channel: network-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://openid.net/developers/certified-openid-connect-implementations/
+  contract_reference:
+    register: OpenID Foundation certified implementations
+    spec_file: null
+    role: certified-op
+    registered_name: GrabTaxi Holdings
+    products:
+    - Grab ID 1.0
+    matched_domain: grab.com
+    api_families:
+    - Basic OP
+    - Implicit OP
+    - openid-providers-profiles
+    api_families_basis: conformance profiles / certification levels passed
+    detected_by: sweep-identity.py
+    detected: '2026-10-13'
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'

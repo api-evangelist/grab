@@ -28,3 +28,31 @@
     detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
+- slug: grab-500-global
+  label: 500 Global
+  partner: 500-global
+  partner_name: 500 Global
+  category: accelerator portfolio participation
+  type: register
+  channel: standard-directory
+  evidence: https://500.co/companies
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: 500 Global portfolio (500.co/companies; the page's own JSON 500.co/api/startups)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Grab
+    register_id: https://500.co/companies
+    register_country: Singapore
+    register_website: www.grab.com
+    matched_domain: grab.com
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    year: '2014'
+  status: not-a-workflow
+  arazzo: null

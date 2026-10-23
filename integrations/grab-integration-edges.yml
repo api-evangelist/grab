@@ -7,6 +7,8 @@ checked:
 - https://www.antler.co/portfolio
 - https://www.techstars.com/portfolio
 - https://www.ycombinator.com/companies
+- https://docs.overturemaps.org/attribution/
+- https://overturemaps.org/about/members/
 marketplace_apps: []
 edges:
 - partner_name: OpenID Foundation certification
@@ -61,6 +63,30 @@ edges:
     year: '2014'
   detected_by: sweep-accelerator-portfolios.py
   first_seen: '2026-10-21'
+- partner_name: Overture Maps Foundation (members)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://overturemaps.org/about/members/
+  category: open map data consortium membership
+  partner_tier: contributor
+  contract_reference:
+    register: Overture Maps Foundation members (overturemaps.org/about/members; landscape.overturemaps.org/data/full.json)
+    standard: Overture Maps (GERS)
+    spec_file: null
+    role: overture-member
+    registered_name: Grab Holdings Inc.
+    register_id: overture-maps-members--contributor--grab-holdings-inc
+    matched_domain: grab.com
+    matched_by: domain
+    signal_note: 'participation only: membership level is partner_tier, never counted'
+    detected_by: sweep-overture-maps-members.py
+    detected: '2026-10-23'
+  detected_by: sweep-overture-maps-members.py
+  first_seen: '2026-10-23'
 source:
 - https://www.ycombinator.com/companies
 - https://500.co/companies
